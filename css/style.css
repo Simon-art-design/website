@@ -243,7 +243,7 @@ textarea:focus-visible {
 /* ==========================================================================
    CARDS — allgemein
    ========================================================================== */
-.phase-grid, .stat-grid, .trust-grid, .benefit-grid, .flex-grid {
+.phase-grid, .stat-grid, .trust-grid, .benefit-grid, .flex-grid, .insurance-grid, .news-grid {
   display: grid;
   gap: 20px;
   margin: 40px 0;
@@ -253,6 +253,9 @@ textarea:focus-visible {
 .trust-grid { grid-template-columns: repeat(3, 1fr); }
 .benefit-grid { grid-template-columns: repeat(2, 1fr); }
 .flex-grid { grid-template-columns: repeat(2, 1fr); }
+.insurance-grid { grid-template-columns: repeat(3, 1fr); }
+.news-grid { grid-template-columns: repeat(2, 1fr); }
+.news-grid .placeholder { margin: 0.5em 0 0; font-size: 0.85rem; }
 
 .phase-card, .trust-card, .benefit-card, .flex-card {
   background: var(--color-cream);
@@ -605,6 +608,8 @@ textarea:focus-visible {
   .trust-grid { grid-template-columns: 1fr; }
   .benefit-grid { grid-template-columns: 1fr; }
   .flex-grid { grid-template-columns: 1fr; }
+  .insurance-grid { grid-template-columns: 1fr; }
+  .news-grid { grid-template-columns: 1fr; }
 
   .calculator { grid-template-columns: 1fr; padding: 24px; }
   .contact-grid { grid-template-columns: 1fr; }
