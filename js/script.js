@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function calculate() {
+    if (!rateInput || !yearsInput || !returnInput) return;
+
     var monthlyRate = parseFloat(rateInput.value);
     var years = parseInt(yearsInput.value, 10);
     var annualReturnPercent = parseFloat(returnInput.value);
