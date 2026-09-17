@@ -142,7 +142,7 @@ textarea:focus-visible {
 .header-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 14px 24px;
+  padding: 10px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -151,8 +151,9 @@ textarea:focus-visible {
 
 .brand {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
   flex-shrink: 0;
 }
 
@@ -165,32 +166,94 @@ textarea:focus-visible {
   font-size: 1.15rem;
   letter-spacing: 0.02em;
   color: var(--color-ink);
+  line-height: 1.1;
 }
 .brand-chevron { color: var(--color-olive-light); }
 
 .brand-sub {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   color: var(--color-text);
   opacity: 0.75;
   white-space: nowrap;
 }
 
-.main-nav {
+/* Desktop: direkt sichtbare Links (News, Kontakt) */
+.primary-links {
   display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
+  gap: 24px;
 }
+.primary-links a,
+.dropdown-menu a,
 .main-nav a {
   color: var(--color-ink);
   font-weight: 500;
   font-size: 0.92rem;
 }
+.primary-links a:hover,
+.dropdown-menu a:hover,
 .main-nav a:hover { color: var(--color-olive-dark); }
 
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+}
+
+/* Desktop: Themen-Dropdown links vom Beratungstermin-Button */
+.nav-dropdown { position: relative; }
+
+.dropdown-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  cursor: pointer;
+}
+.dropdown-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 0 auto;
+  background: var(--color-ink);
+}
+.dropdown-toggle[aria-expanded="true"] {
+  background: var(--color-cream-2);
+  border-color: var(--color-olive-dark);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 220px;
+  background: var(--color-cream);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 10px;
+  box-shadow: 0 8px 24px rgba(42, 44, 34, 0.08);
+}
+.dropdown-menu:not([hidden]) { display: flex; }
+.dropdown-menu a {
+  padding: 9px 12px;
+  border-radius: 8px;
+}
+.dropdown-menu a:hover {
+  background: var(--color-cream-2);
+  color: var(--color-olive-dark);
+}
+
+/* Mobil: ein Hamburger-Menü mit allen Links */
+.main-nav {
+  display: none;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
 .nav-toggle {
@@ -262,6 +325,19 @@ textarea:focus-visible {
   overflow: hidden;
 }
 
+.section-illustration {
+  border-radius: var(--radius-card);
+  background: var(--color-card);
+  padding: 20px 28px;
+  margin: 28px 0;
+}
+.section-illustration svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+}
+
 /* ==========================================================================
    CARDS — allgemein
    ========================================================================== */
@@ -284,12 +360,23 @@ textarea:focus-visible {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   padding: 26px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.phase-card:hover, .trust-card:hover, .benefit-card:hover, .flex-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-olive-dark);
+  box-shadow: 0 10px 24px rgba(42, 44, 34, 0.06);
 }
 .section-alt .phase-card,
 .section-alt .trust-card,
 .section-alt .benefit-card,
 .section-alt .flex-card {
   background: var(--color-cream-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phase-card, .trust-card, .benefit-card, .flex-card { transition: none; }
+  .phase-card:hover, .trust-card:hover, .benefit-card:hover, .flex-card:hover { transform: none; }
 }
 
 .phase-icon {
@@ -649,7 +736,8 @@ textarea:focus-visible {
     padding: 12px 24px;
   }
   .nav-toggle { display: flex; }
-  .brand-sub { display: none; }
+  .primary-links { display: none; }
+  .nav-dropdown { display: none; }
 
   .hero-inner { grid-template-columns: 1fr; }
   .hero-art { order: -1; max-width: 320px; margin: 0 auto; }

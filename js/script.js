@@ -24,6 +24,43 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ---------------- Themen-Dropdown (Desktop) ---------------- */
+  var topicsToggle = document.getElementById('topics-toggle');
+  var topicsMenu = document.getElementById('topics-menu');
+
+  if (topicsToggle && topicsMenu) {
+    function closeTopicsMenu() {
+      topicsMenu.hidden = true;
+      topicsToggle.setAttribute('aria-expanded', 'false');
+    }
+    function openTopicsMenu() {
+      topicsMenu.hidden = false;
+      topicsToggle.setAttribute('aria-expanded', 'true');
+    }
+
+    topicsToggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      if (topicsMenu.hidden) { openTopicsMenu(); } else { closeTopicsMenu(); }
+    });
+
+    topicsMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeTopicsMenu);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!topicsMenu.hidden && !topicsMenu.contains(event.target) && event.target !== topicsToggle) {
+        closeTopicsMenu();
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !topicsMenu.hidden) {
+        closeTopicsMenu();
+        topicsToggle.focus();
+      }
+    });
+  }
+
   /* ---------------- Fade-in beim Scrollen ---------------- */
   var fadeEls = document.querySelectorAll('.fade-in');
   if ('IntersectionObserver' in window) {
