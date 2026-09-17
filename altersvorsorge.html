@@ -33,7 +33,6 @@
 
     <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
       <a href="lebensphasen.html">Lebensphasen</a>
-      <a href="rechner.html">Rechner</a>
       <a href="kinderaltersvorsorge.html">Kinderaltersvorsorge</a>
       <a href="vermoegensaufbau.html">Vermögensaufbau</a>
       <a href="altersvorsorge.html" aria-current="page" class="is-active">Altersvorsorge</a>
@@ -103,6 +102,116 @@
             aktuellen Stand.</p>
         </div>
       </div>
+
+      <div class="text-block" id="rechner">
+        <h3>Selbst rechnen: Sparplan oder Rürup-Rente</h3>
+        <p>
+          Verändern Sie die Regler und beobachten Sie, wie sich monatliche Sparrate, Anlagedauer
+          und Rendite auf das Ergebnis auswirken. Über den Umschalter lässt sich zwischen einem
+          klassischen Sparplan und einer vereinfachten Rürup-Rente-Beispielrechnung wechseln. Die
+          Berechnung erfolgt vollständig in Ihrem Browser.
+        </p>
+      </div>
+
+      <div class="calculator fade-in">
+        <div class="calculator-mode-toggle" role="tablist" aria-label="Rechner-Modus wählen">
+          <button type="button" class="mode-btn is-active" id="mode-sparplan" role="tab" aria-selected="true">
+            Klassischer Sparplan
+          </button>
+          <button type="button" class="mode-btn" id="mode-ruerup" role="tab" aria-selected="false">
+            Rürup-Rente (Basisrente)
+          </button>
+        </div>
+
+        <div class="calculator-controls">
+
+          <div class="control">
+            <label for="rate-input">Monatliche Sparrate</label>
+            <input type="range" id="rate-input" min="25" max="1000" step="5" value="100"
+                   aria-describedby="rate-value">
+            <output id="rate-value" for="rate-input">100&nbsp;€</output>
+          </div>
+
+          <div class="control">
+            <label for="years-input">Anlagedauer (Jahre)</label>
+            <input type="range" id="years-input" min="1" max="70" step="1" value="18"
+                   aria-describedby="years-value">
+            <output id="years-value" for="years-input">18&nbsp;Jahre</output>
+          </div>
+
+          <div class="control">
+            <label for="return-input">Angenommene Rendite p.&nbsp;a.</label>
+            <input type="range" id="return-input" min="0" max="10" step="0.5" value="5"
+                   aria-describedby="return-value">
+            <output id="return-value" for="return-input">5,0&nbsp;%</output>
+          </div>
+
+          <div class="control" id="control-taxrate" hidden>
+            <label for="taxrate-input">Persönlicher Steuersatz (Ansparphase)</label>
+            <input type="range" id="taxrate-input" min="20" max="45" step="1" value="30"
+                   aria-describedby="taxrate-value">
+            <output id="taxrate-value" for="taxrate-input">30&nbsp;%</output>
+          </div>
+        </div>
+
+        <div class="calculator-result">
+          <div class="chart-wrap" role="img" aria-label="Balkendiagramm: eigene Einzahlungen im Vergleich zum Wertzuwachs durch Zinseszins">
+            <div class="chart">
+              <div class="chart-bar">
+                <div class="chart-bar-fill chart-bar-einzahlung" id="bar-einzahlung"></div>
+              </div>
+              <div class="chart-bar">
+                <div class="chart-bar-fill chart-bar-zuwachs" id="bar-zuwachs"></div>
+              </div>
+            </div>
+            <div class="chart-labels">
+              <span><i class="legend-dot legend-dot-a"></i>Eigene Einzahlungen</span>
+              <span><i class="legend-dot legend-dot-b"></i>Wertzuwachs durch Zinseszins</span>
+            </div>
+          </div>
+
+          <div class="result-numbers">
+            <div class="result-line">
+              <span>Eigene Einzahlungen</span>
+              <strong id="out-einzahlung">21.600&nbsp;€</strong>
+            </div>
+            <div class="result-line">
+              <span>Wertzuwachs durch Zinseszins</span>
+              <strong id="out-zuwachs">13.285&nbsp;€</strong>
+            </div>
+            <div class="result-line result-line-total">
+              <span id="out-total-label">Gesamt-Endwert</span>
+              <strong id="out-total">34.885&nbsp;€</strong>
+            </div>
+
+            <div id="ruerup-extra" hidden>
+              <div class="result-line">
+                <span>Geschätzte monatliche Rürup-Rente (lebenslang)</span>
+                <strong id="out-ruerup-rente">0&nbsp;€</strong>
+              </div>
+              <div class="result-line">
+                <span>Geschätzte Steuerersparnis pro Jahr (Ansparphase)</span>
+                <strong id="out-steuerersparnis">0&nbsp;€</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="disclaimer">
+        Hinweis: Diese Berechnung ist eine unverbindliche Beispielrechnung und dient ausschließlich
+        der Veranschaulichung des Zinseszinseffekts. Sie stellt keine Anlage-, Steuer- oder
+        Rentenberatung dar und ist keine Garantie für eine künftige Wertentwicklung.
+        Kapitalanlagen unterliegen Chancen und Risiken. Bei der Rürup-Rente sind die geschätzte
+        monatliche Rente und die Steuerersparnis stark vereinfachte Näherungswerte (angenommene
+        Rentenbezugsdauer von 20 Jahren, ohne Berücksichtigung der jährlich geltenden steuerlichen
+        Höchstbeträge oder individueller Lebenserwartung); die tatsächliche Rentenhöhe legt der
+        jeweilige Versicherer im Vertrag fest.
+      </p>
+
+      <blockquote class="quote-card fade-in">
+        <p>„Wer früh beginnt, lässt die Zeit für sich arbeiten.“</p>
+      </blockquote>
 
       <div class="text-block">
         <h3>Warum sich ein frühzeitiger Blick auf die Altersvorsorge lohnt</h3>

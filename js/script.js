@@ -41,14 +41,16 @@ document.addEventListener('DOMContentLoaded', function () {
     fadeEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  /* ---------------- Zinseszins-Rechner ---------------- */
+  /* ---------------- Altersvorsorge-Rechner (Sparplan / Rürup-Umschalter) ---------------- */
   var rateInput = document.getElementById('rate-input');
   var yearsInput = document.getElementById('years-input');
   var returnInput = document.getElementById('return-input');
+  var taxrateInput = document.getElementById('taxrate-input');
 
   var rateValue = document.getElementById('rate-value');
   var yearsValue = document.getElementById('years-value');
   var returnValue = document.getElementById('return-value');
+  var taxrateValue = document.getElementById('taxrate-value');
 
   var barEinzahlung = document.getElementById('bar-einzahlung');
   var barZuwachs = document.getElementById('bar-zuwachs');
@@ -56,6 +58,17 @@ document.addEventListener('DOMContentLoaded', function () {
   var outEinzahlung = document.getElementById('out-einzahlung');
   var outZuwachs = document.getElementById('out-zuwachs');
   var outTotal = document.getElementById('out-total');
+  var outTotalLabel = document.getElementById('out-total-label');
+  var outRuerupRente = document.getElementById('out-ruerup-rente');
+  var outSteuerersparnis = document.getElementById('out-steuerersparnis');
+
+  var modeSparplanBtn = document.getElementById('mode-sparplan');
+  var modeRuerupBtn = document.getElementById('mode-ruerup');
+  var controlTaxrate = document.getElementById('control-taxrate');
+  var ruerupExtra = document.getElementById('ruerup-extra');
+
+  var calculatorMode = 'sparplan';
+  var RUERUP_RENTENBEZUGSJAHRE = 20; // vereinfachte Annahme für die Beispielrechnung
 
   var currencyFormatter = new Intl.NumberFormat('de-DE', {
     style: 'currency',
@@ -65,6 +78,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function formatEuro(value) {
     return currencyFormatter.format(Math.round(value));
+  }
+
+  function setMode(mode) {
+    calculatorMode = mode;
+    var isRuerup = mode === 'ruerup';
+
+    if (modeSparplanBtn && modeRuerupBtn) {
+      modeSparplanBtn.classList.toggle('is-active', !isRuerup);
+      modeSparplanBtn.setAttribute('aria-selected', String(!isRuerup));
+      modeRuerupBtn.classList.toggle('is-active', isRuerup);
+      modeRuerupBtn.setAttribute('aria-selected', String(isRuerup));
+    }
+    if (controlTaxrate) controlTaxrate.hidden = !isRuerup;
+    if (ruerupExtra) ruerupExtra.hidden = !isRuerup;
+    if (outTotalLabel) outTotalLabel.textContent = isRuerup ? 'Kapital bei Rentenbeginn' : 'Gesamt-Endwert';
+
+    calculate();
   }
 
   function calculate() {
@@ -107,11 +137,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     barEinzahlung.style.height = einzahlungHeight + '%';
     barZuwachs.style.height = totalHeight + '%';
+
+    // Rürup-spezifische Näherungswerte (nur im Rürup-Modus sichtbar)
+    if (calculatorMode === 'ruerup' && taxrateInput && outRuerupRente && outSteuerersparnis) {
+      var taxRatePercent = parseFloat(taxrateInput.value);
+      taxrateValue.textContent = taxRatePercent.toFixed(0) + ' %';
+
+      var monthlyPension = finalValue / (RUERUP_RENTENBEZUGSJAHRE * 12);
+      var annualTaxSaving = monthlyRate * 12 * (taxRatePercent / 100);
+
+      outRuerupRente.textContent = formatEuro(monthlyPension);
+      outSteuerersparnis.textContent = formatEuro(annualTaxSaving);
+    }
   }
 
-  [rateInput, yearsInput, returnInput].forEach(function (input) {
+  [rateInput, yearsInput, returnInput, taxrateInput].forEach(function (input) {
     if (input) input.addEventListener('input', calculate);
   });
+
+  if (modeSparplanBtn && modeRuerupBtn) {
+    modeSparplanBtn.addEventListener('click', function () { setMode('sparplan'); });
+    modeRuerupBtn.addEventListener('click', function () { setMode('ruerup'); });
+  }
 
   calculate();
 
