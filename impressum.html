@@ -30,20 +30,20 @@
     </a>
 
     <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
-      <a href="index.html#lebensphasen">Lebensphasen</a>
-      <a href="index.html#rechner">Rechner</a>
-      <a href="index.html#kinderaltersvorsorge">Kinderaltersvorsorge</a>
-      <a href="index.html#vermoegensaufbau">Vermögensaufbau</a>
-      <a href="index.html#altersvorsorge">Altersvorsorge</a>
-      <a href="index.html#berufsunfaehigkeit">Berufsunfähigkeit</a>
-      <a href="index.html#krankenversicherung">Krankenversicherung</a>
-      <a href="index.html#absicherung">Absicherung</a>
-      <a href="index.html#news">News</a>
-      <a href="index.html#kontakt">Kontakt</a>
+      <a href="lebensphasen.html">Lebensphasen</a>
+      <a href="rechner.html">Rechner</a>
+      <a href="kinderaltersvorsorge.html">Kinderaltersvorsorge</a>
+      <a href="vermoegensaufbau.html">Vermögensaufbau</a>
+      <a href="altersvorsorge.html">Altersvorsorge</a>
+      <a href="berufsunfaehigkeit.html">Berufsunfähigkeit</a>
+      <a href="krankenversicherung.html">Krankenversicherung</a>
+      <a href="absicherung.html">Absicherung</a>
+      <a href="news.html">News</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
 
     <div class="header-actions">
-      <a class="btn btn-primary btn-small" href="index.html#kontakt">Beratungstermin</a>
+      <a class="btn btn-primary btn-small" href="kontakt.html">Beratungstermin</a>
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
       </button>
@@ -223,6 +223,73 @@
       <p class="disclaimer">
         [Stand: Monat/Jahr der letzten Prüfung dieses Impressums einfügen]
       </p>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="kontakt" aria-labelledby="kontakt-heading">
+    <div class="section-inner">
+      <p class="eyebrow">Kontakt</p>
+      <h2 id="kontakt-heading">Lassen Sie uns über Ihre Zukunft sprechen — unverbindlich und in Ruhe.</h2>
+
+      <p class="info-box">
+        100&nbsp;% unabhängige Beratung: Horbach vertreibt keine eigenen Produkte und wählt frei
+        aus dem gesamten Markt, damit die Lösung zu Ihnen passt — nicht umgekehrt.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card fade-in">
+          <h3>Simon Langkabel</h3>
+          <p class="contact-role">Finanz- &amp; Versicherungsberatung</p>
+          <p>Horbach Wirtschaftsberatung</p>
+          <p>Stuttgart</p>
+          <hr>
+          <p><strong>Telefon:</strong> <a href="tel:+4915751113111">0157 511 131 11</a></p>
+          <p><strong>E-Mail:</strong> <a href="mailto:simon.langkabel@horbach.de">simon.langkabel@horbach.de</a></p>
+        </div>
+
+        <form class="contact-form fade-in" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="firstname">Vorname *</label>
+              <input type="text" id="firstname" name="firstname" required autocomplete="given-name">
+            </div>
+            <div class="form-field">
+              <label for="lastname">Nachname *</label>
+              <input type="text" id="lastname" name="lastname" required autocomplete="family-name">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Telefon (optional)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+
+          <div class="form-field">
+            <label for="message">Nachricht *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <div class="form-field form-checkbox">
+            <input type="checkbox" id="dsgvo" name="dsgvo" required>
+            <label for="dsgvo">
+              Ich habe die Hinweise zum Datenschutz gelesen und stimme der Verarbeitung meiner
+              Angaben zur Bearbeitung meiner Anfrage zu. *
+            </label>
+          </div>
+
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <p class="form-success" id="form-success" role="status" hidden>
+            Vielen Dank für Ihre Nachricht! Wir melden uns zeitnah bei Ihnen zurück.
+          </p>
+
+          <button type="submit" class="btn btn-primary">Nachricht senden</button>
+        </form>
+      </div>
     </div>
   </section>
 

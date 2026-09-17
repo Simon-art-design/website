@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horbach Wirtschaftsberatung · Simon Langkabel · Stuttgart</title>
-<meta name="description" content="Unabhängige Finanz- und Versicherungsberatung von Simon Langkabel in Stuttgart: Kinderaltersvorsorge, Vermögensaufbau und individuelle Absicherung für jede Lebensphase.">
+<title>Lebensphasen · Horbach Wirtschaftsberatung</title>
+<meta name="description" content="Finanzielle Beratung entlang der eigenen Lebensphasen: von Kindergarten und Schule bis zum Ruhestand.">
 
 <!-- Google Fonts: Fraunces (Überschriften) & Inter (Fließtext) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +32,7 @@
     </a>
 
     <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
-      <a href="lebensphasen.html">Lebensphasen</a>
+      <a href="lebensphasen.html" aria-current="page" class="is-active">Lebensphasen</a>
       <a href="rechner.html">Rechner</a>
       <a href="kinderaltersvorsorge.html">Kinderaltersvorsorge</a>
       <a href="vermoegensaufbau.html">Vermögensaufbau</a>
@@ -55,94 +55,86 @@
 
 <main>
 
-<section class="hero" aria-labelledby="hero-heading">
-    <div class="section-inner hero-inner">
-      <div class="hero-copy fade-in">
-        <p class="eyebrow">Finanz- &amp; Versicherungsberatung</p>
-        <h1 id="hero-heading">Für Ihre Zukunft beginnt der richtige Moment heute.</h1>
-        <p class="hero-sub">
-          Ob Kinderaltersvorsorge, Berufsunfähigkeit oder Vermögensaufbau – gemeinsam entwickeln wir
-          eine Strategie, die zu Ihrer Lebensphase passt. Unabhängig, persönlich und ohne Verkaufsdruck.
-        </p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="kontakt.html">Beratungsgespräch anfragen</a>
-          <a class="btn btn-ghost" href="rechner.html">Zum Zinseszins-Rechner</a>
+<section class="section" id="lebensphasen" aria-labelledby="lebensphasen-heading">
+    <div class="section-inner">
+      <p class="eyebrow">Lebensphasen</p>
+      <h2 id="lebensphasen-heading">Jede Phase des Lebens braucht ihren eigenen Plan</h2>
+      <p class="section-intro">
+        Finanzielle Bedürfnisse verändern sich mit dem Leben. Eine gute Beratung berücksichtigt,
+        in welcher Phase Sie oder Ihre Familie gerade stehen – und passt die Lösung entsprechend an.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-card fade-in">
+          <p class="stat-number">4</p>
+          <p class="stat-label">Lebensphasen mit jeweils eigenem Absicherungs- und Vorsorgebedarf</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">⟳</p>
+          <p class="stat-label">Anpassung jederzeit möglich, wenn sich die Lebenssituation ändert</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">1</p>
+          <p class="stat-label">Ansprechpartner für alle Phasen — statt viele einzelne Verträge</p>
         </div>
       </div>
 
-      <div class="hero-art fade-in" aria-hidden="true">
-        <svg viewBox="0 0 360 320" width="100%" height="100%" role="presentation">
-          <!-- Dezente eigene Illustration statt Stockfoto: wachsende Balken + Blatt -->
-          <rect x="0" y="0" width="360" height="320" rx="24" fill="#E4E8C4"/>
-          <g stroke="#7E9330" stroke-width="2" stroke-linecap="round">
-            <line x1="48" y1="260" x2="320" y2="260"/>
-          </g>
-          <rect x="70" y="200" width="34" height="60" rx="6" fill="#A6C13B"/>
-          <rect x="130" y="160" width="34" height="100" rx="6" fill="#7E9330"/>
-          <rect x="190" y="120" width="34" height="140" rx="6" fill="#A6C13B"/>
-          <rect x="250" y="80" width="34" height="180" rx="6" fill="#32362B"/>
-          <path d="M267 60 C255 40 267 20 285 22 C283 42 279 54 267 60 Z" fill="#7E9330"/>
-          <path d="M267 60 C279 45 300 45 306 60 C292 68 278 68 267 60 Z" fill="#A6C13B"/>
-        </svg>
+      <div class="phase-grid">
+        <article class="phase-card fade-in">
+          <div class="phase-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none"><path d="M12 3v4M12 3c-3 1-4 4-4 6a4 4 0 008 0c0-2-1-5-4-6z" stroke="#32362B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 21c1.5-3 4-4 8-4s6.5 1 8 4" stroke="#32362B" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Früh</h3>
+          <p class="phase-sub">Kindergarten &amp; Schule</p>
+          <p>Die Grundlagen für finanzielle Sicherheit lassen sich schon in den ersten Lebensjahren
+            legen – mit kleinen Beiträgen und viel Zeit zum Wachsen.</p>
+        </article>
+
+        <article class="phase-card fade-in">
+          <div class="phase-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none"><path d="M12 4L2 9l10 5 10-5-10-5z" stroke="#32362B" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 11.5v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" stroke="#32362B" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Ausbildung</h3>
+          <p class="phase-sub">Lernen &amp; Aufbruch</p>
+          <p>Führerschein, Studium, erste eigene Wohnung: Wer früh vorsorgt, steht in dieser
+            Phase finanziell auf sicherem Boden.</p>
+        </article>
+
+        <article class="phase-card fade-in">
+          <div class="phase-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none"><path d="M3 21V10l9-6 9 6v11" stroke="#32362B" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><path d="M9 21v-6h6v6" stroke="#32362B" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Eigenständigkeit</h3>
+          <p class="phase-sub">Beruf &amp; Familie</p>
+          <p>Berufseinstieg, Familiengründung, Eigentum – jetzt zählt eine Absicherung, die
+            mitwächst und zur eigenen Lebensplanung passt.</p>
+        </article>
+
+        <article class="phase-card fade-in">
+          <div class="phase-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none"><circle cx="12" cy="12" r="4.5" stroke="#32362B" stroke-width="1.6"/><path d="M12 3v2.2M12 18.8V21M4.2 12H3M21 12h-1.2M6 6l1.4 1.4M18 6l-1.4 1.4M6 18l1.4-1.4M18 18l-1.4-1.4" stroke="#32362B" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Alter</h3>
+          <p class="phase-sub">Ruhestand &amp; Vorsorge</p>
+          <p>Mit sinkendem gesetzlichen Rentenniveau wird private Vorsorge zum zentralen
+            Baustein für einen sorgenfreien Lebensabend.</p>
+        </article>
       </div>
-    </div>
-  </section>
-  <!-- ===================== THEMENUEBERSICHT ===================== -->
-  <section class="section" id="themen" aria-labelledby="themen-heading">
-    <div class="section-inner">
-      <p class="eyebrow">Themen im Überblick</p>
-      <h2 id="themen-heading">Jeder Bereich auf einen Blick</h2>
-      <p class="section-intro">
-        Wählen Sie ein Thema, um mehr zu erfahren. Am Ende jeder Seite erreichen Sie direkt
-        die Kontaktmöglichkeit für ein unverbindliches Gespräch.
-      </p>
-      <div class="topic-grid">
-        <a class="topic-card fade-in" href="lebensphasen.html">
-          <p class="eyebrow">Lebensphasen</p>
-          <h3>Jede Phase des Lebens braucht ihren eigenen Plan</h3>
-          <p>Finanzielle Bedürfnisse verändern sich mit dem Leben – von der Kindheit bis zum Ruhestand.</p>
-        </a>
-        <a class="topic-card fade-in" href="rechner.html">
-          <p class="eyebrow">Zinseszins-Rechner</p>
-          <h3>Wie aus kleinen Beträgen große Werte werden</h3>
-          <p>Monatliche Sparrate, Laufzeit und Rendite frei einstellen und den Effekt live beobachten.</p>
-        </a>
-        <a class="topic-card fade-in" href="kinderaltersvorsorge.html">
-          <p class="eyebrow">Kinderaltersvorsorge</p>
-          <h3>Der beste Zeitpunkt ist jetzt</h3>
-          <p>Warum der Zeitvorteil bei einem frühen Start für Kinder besonders groß ist.</p>
-        </a>
-        <a class="topic-card fade-in" href="vermoegensaufbau.html">
-          <p class="eyebrow">Vermögensaufbau für Kinder</p>
-          <h3>Kapital aufbauen, unabhängig von Versicherung</h3>
-          <p>Reiner Kapitalaufbau per ETF-Sparplan, Junior-Depot oder fondsgebundener Sparform.</p>
-        </a>
-        <a class="topic-card fade-in" href="altersvorsorge.html">
-          <p class="eyebrow">Altersvorsorge</p>
-          <h3>Wo die gesetzliche Rente nicht ausreicht</h3>
-          <p>Gesetzliche Rente, Rürup-Rente und Altersvorsorgedepot im Zusammenspiel.</p>
-        </a>
-        <a class="topic-card fade-in" href="berufsunfaehigkeit.html">
-          <p class="eyebrow">Berufsunfähigkeit</p>
-          <h3>Ihre Arbeitskraft zuverlässig abgesichert</h3>
-          <p>Warum die eigene Arbeitskraft der wichtigste Vermögenswert überhaupt ist.</p>
-        </a>
-        <a class="topic-card fade-in" href="krankenversicherung.html">
-          <p class="eyebrow">Krankenversicherung</p>
-          <h3>Privat und gesetzlich im Vergleich</h3>
-          <p>Unabhängige Beratung zu PKV und GKV, abgestimmt auf Ihre Lebenssituation.</p>
-        </a>
-        <a class="topic-card fade-in" href="absicherung.html">
-          <p class="eyebrow">Sachversicherungen</p>
-          <h3>Ihr Eigentum zuverlässig abgesichert</h3>
-          <p>Von der Privathaftpflicht bis zur Wohngebäudeversicherung im Überblick.</p>
-        </a>
-        <a class="topic-card fade-in" href="news.html">
-          <p class="eyebrow">News</p>
-          <h3>Aktuelle Themen aus der Finanzwelt</h3>
-          <p>Hintergrundwissen zu Leitzinsen, Inflation, Rentenreform und Diversifikation.</p>
-        </a>
+
+      <div class="text-block">
+        <h3>Warum sich Lebensphasen-Planung lohnt</h3>
+        <p>
+          Wer seine Absicherung nur einmal plant und danach nie wieder anschaut, läuft Gefahr, dass
+          Verträge nicht mehr zur aktuellen Lebenssituation passen. Eine Betrachtung entlang der
+          eigenen Lebensphasen macht sichtbar, wo Schutzbedarf entsteht, wo er wieder abnimmt und wo
+          sich zusätzlicher Spielraum für den Vermögensaufbau ergibt. So bleibt die Absicherung im
+          Gleichschritt mit dem eigenen Leben – nicht andersherum.
+        </p>
       </div>
+
+      <blockquote class="quote-card fade-in">
+        <p>„Jede Lebensphase verdient ihren eigenen Plan.“</p>
+      </blockquote>
     </div>
   </section>
 

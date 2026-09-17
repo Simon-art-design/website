@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horbach Wirtschaftsberatung · Simon Langkabel · Stuttgart</title>
-<meta name="description" content="Unabhängige Finanz- und Versicherungsberatung von Simon Langkabel in Stuttgart: Kinderaltersvorsorge, Vermögensaufbau und individuelle Absicherung für jede Lebensphase.">
+<title>Zinseszins-Rechner · Horbach Wirtschaftsberatung</title>
+<meta name="description" content="Interaktiver Zinseszins-Rechner: monatliche Sparrate, Laufzeit und Rendite frei einstellen.">
 
 <!-- Google Fonts: Fraunces (Überschriften) & Inter (Fließtext) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +33,7 @@
 
     <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
       <a href="lebensphasen.html">Lebensphasen</a>
-      <a href="rechner.html">Rechner</a>
+      <a href="rechner.html" aria-current="page" class="is-active">Rechner</a>
       <a href="kinderaltersvorsorge.html">Kinderaltersvorsorge</a>
       <a href="vermoegensaufbau.html">Vermögensaufbau</a>
       <a href="altersvorsorge.html">Altersvorsorge</a>
@@ -55,94 +55,108 @@
 
 <main>
 
-<section class="hero" aria-labelledby="hero-heading">
-    <div class="section-inner hero-inner">
-      <div class="hero-copy fade-in">
-        <p class="eyebrow">Finanz- &amp; Versicherungsberatung</p>
-        <h1 id="hero-heading">Für Ihre Zukunft beginnt der richtige Moment heute.</h1>
-        <p class="hero-sub">
-          Ob Kinderaltersvorsorge, Berufsunfähigkeit oder Vermögensaufbau – gemeinsam entwickeln wir
-          eine Strategie, die zu Ihrer Lebensphase passt. Unabhängig, persönlich und ohne Verkaufsdruck.
+<section class="section section-alt" id="rechner" aria-labelledby="rechner-heading">
+    <div class="section-inner">
+      <p class="eyebrow">Zinseszins-Rechner</p>
+      <h2 id="rechner-heading">Wie aus kleinen Beträgen große Werte werden</h2>
+      <p class="section-intro">
+        Verändern Sie die Regler und beobachten Sie, wie sich monatliche Sparrate, Anlagedauer
+        und Rendite auf das Endergebnis auswirken. Die Berechnung erfolgt vollständig in Ihrem Browser.
+      </p>
+
+      <div class="text-block">
+        <h3>Wie der Zinseszinseffekt wirkt</h3>
+        <p>
+          Beim Zinseszins wird nicht nur das eingezahlte Kapital verzinst, sondern auch die bereits
+          gutgeschriebenen Erträge selbst. Dadurch wächst ein Depot mit der Zeit nicht linear,
+          sondern zunehmend schneller. Je länger der Anlagehorizont, desto größer der Anteil, den
+          der Wertzuwachs selbst zum Endergebnis beiträgt – ein Effekt, der sich mit dem Rechner
+          unten direkt nachvollziehen lässt.
         </p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="kontakt.html">Beratungsgespräch anfragen</a>
-          <a class="btn btn-ghost" href="rechner.html">Zum Zinseszins-Rechner</a>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card fade-in">
+          <p class="stat-number">70</p>
+          <p class="stat-label">Jahre Anlagedauer maximal einstellbar</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">2</p>
+          <p class="stat-label">Bausteine des Endwerts: eigene Einzahlung und Wertzuwachs</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">0</p>
+          <p class="stat-label">Versteckte Kosten — die Berechnung läuft vollständig in Ihrem Browser</p>
         </div>
       </div>
 
-      <div class="hero-art fade-in" aria-hidden="true">
-        <svg viewBox="0 0 360 320" width="100%" height="100%" role="presentation">
-          <!-- Dezente eigene Illustration statt Stockfoto: wachsende Balken + Blatt -->
-          <rect x="0" y="0" width="360" height="320" rx="24" fill="#E4E8C4"/>
-          <g stroke="#7E9330" stroke-width="2" stroke-linecap="round">
-            <line x1="48" y1="260" x2="320" y2="260"/>
-          </g>
-          <rect x="70" y="200" width="34" height="60" rx="6" fill="#A6C13B"/>
-          <rect x="130" y="160" width="34" height="100" rx="6" fill="#7E9330"/>
-          <rect x="190" y="120" width="34" height="140" rx="6" fill="#A6C13B"/>
-          <rect x="250" y="80" width="34" height="180" rx="6" fill="#32362B"/>
-          <path d="M267 60 C255 40 267 20 285 22 C283 42 279 54 267 60 Z" fill="#7E9330"/>
-          <path d="M267 60 C279 45 300 45 306 60 C292 68 278 68 267 60 Z" fill="#A6C13B"/>
-        </svg>
+      <div class="calculator fade-in">
+        <div class="calculator-controls">
+
+          <div class="control">
+            <label for="rate-input">Monatliche Sparrate</label>
+            <input type="range" id="rate-input" min="25" max="1000" step="5" value="100"
+                   aria-describedby="rate-value">
+            <output id="rate-value" for="rate-input">100&nbsp;€</output>
+          </div>
+
+          <div class="control">
+            <label for="years-input">Anlagedauer (Jahre)</label>
+            <input type="range" id="years-input" min="1" max="70" step="1" value="18"
+                   aria-describedby="years-value">
+            <output id="years-value" for="years-input">18&nbsp;Jahre</output>
+          </div>
+
+          <div class="control">
+            <label for="return-input">Angenommene Rendite p.&nbsp;a.</label>
+            <input type="range" id="return-input" min="0" max="10" step="0.5" value="5"
+                   aria-describedby="return-value">
+            <output id="return-value" for="return-input">5,0&nbsp;%</output>
+          </div>
+        </div>
+
+        <div class="calculator-result">
+          <div class="chart-wrap" role="img" aria-label="Balkendiagramm: eigene Einzahlungen im Vergleich zum Wertzuwachs durch Zinseszins">
+            <div class="chart">
+              <div class="chart-bar">
+                <div class="chart-bar-fill chart-bar-einzahlung" id="bar-einzahlung"></div>
+              </div>
+              <div class="chart-bar">
+                <div class="chart-bar-fill chart-bar-zuwachs" id="bar-zuwachs"></div>
+              </div>
+            </div>
+            <div class="chart-labels">
+              <span><i class="legend-dot legend-dot-a"></i>Eigene Einzahlungen</span>
+              <span><i class="legend-dot legend-dot-b"></i>Wertzuwachs durch Zinseszins</span>
+            </div>
+          </div>
+
+          <div class="result-numbers">
+            <div class="result-line">
+              <span>Eigene Einzahlungen</span>
+              <strong id="out-einzahlung">21.600&nbsp;€</strong>
+            </div>
+            <div class="result-line">
+              <span>Wertzuwachs durch Zinseszins</span>
+              <strong id="out-zuwachs">13.285&nbsp;€</strong>
+            </div>
+            <div class="result-line result-line-total">
+              <span>Gesamt-Endwert</span>
+              <strong id="out-total">34.885&nbsp;€</strong>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- ===================== THEMENUEBERSICHT ===================== -->
-  <section class="section" id="themen" aria-labelledby="themen-heading">
-    <div class="section-inner">
-      <p class="eyebrow">Themen im Überblick</p>
-      <h2 id="themen-heading">Jeder Bereich auf einen Blick</h2>
-      <p class="section-intro">
-        Wählen Sie ein Thema, um mehr zu erfahren. Am Ende jeder Seite erreichen Sie direkt
-        die Kontaktmöglichkeit für ein unverbindliches Gespräch.
+
+      <p class="disclaimer">
+        Hinweis: Diese Berechnung ist eine unverbindliche Beispielrechnung und dient ausschließlich
+        der Veranschaulichung des Zinseszinseffekts. Sie stellt keine Anlageberatung dar und ist
+        keine Garantie für eine künftige Wertentwicklung. Kapitalanlagen unterliegen Chancen und Risiken.
       </p>
-      <div class="topic-grid">
-        <a class="topic-card fade-in" href="lebensphasen.html">
-          <p class="eyebrow">Lebensphasen</p>
-          <h3>Jede Phase des Lebens braucht ihren eigenen Plan</h3>
-          <p>Finanzielle Bedürfnisse verändern sich mit dem Leben – von der Kindheit bis zum Ruhestand.</p>
-        </a>
-        <a class="topic-card fade-in" href="rechner.html">
-          <p class="eyebrow">Zinseszins-Rechner</p>
-          <h3>Wie aus kleinen Beträgen große Werte werden</h3>
-          <p>Monatliche Sparrate, Laufzeit und Rendite frei einstellen und den Effekt live beobachten.</p>
-        </a>
-        <a class="topic-card fade-in" href="kinderaltersvorsorge.html">
-          <p class="eyebrow">Kinderaltersvorsorge</p>
-          <h3>Der beste Zeitpunkt ist jetzt</h3>
-          <p>Warum der Zeitvorteil bei einem frühen Start für Kinder besonders groß ist.</p>
-        </a>
-        <a class="topic-card fade-in" href="vermoegensaufbau.html">
-          <p class="eyebrow">Vermögensaufbau für Kinder</p>
-          <h3>Kapital aufbauen, unabhängig von Versicherung</h3>
-          <p>Reiner Kapitalaufbau per ETF-Sparplan, Junior-Depot oder fondsgebundener Sparform.</p>
-        </a>
-        <a class="topic-card fade-in" href="altersvorsorge.html">
-          <p class="eyebrow">Altersvorsorge</p>
-          <h3>Wo die gesetzliche Rente nicht ausreicht</h3>
-          <p>Gesetzliche Rente, Rürup-Rente und Altersvorsorgedepot im Zusammenspiel.</p>
-        </a>
-        <a class="topic-card fade-in" href="berufsunfaehigkeit.html">
-          <p class="eyebrow">Berufsunfähigkeit</p>
-          <h3>Ihre Arbeitskraft zuverlässig abgesichert</h3>
-          <p>Warum die eigene Arbeitskraft der wichtigste Vermögenswert überhaupt ist.</p>
-        </a>
-        <a class="topic-card fade-in" href="krankenversicherung.html">
-          <p class="eyebrow">Krankenversicherung</p>
-          <h3>Privat und gesetzlich im Vergleich</h3>
-          <p>Unabhängige Beratung zu PKV und GKV, abgestimmt auf Ihre Lebenssituation.</p>
-        </a>
-        <a class="topic-card fade-in" href="absicherung.html">
-          <p class="eyebrow">Sachversicherungen</p>
-          <h3>Ihr Eigentum zuverlässig abgesichert</h3>
-          <p>Von der Privathaftpflicht bis zur Wohngebäudeversicherung im Überblick.</p>
-        </a>
-        <a class="topic-card fade-in" href="news.html">
-          <p class="eyebrow">News</p>
-          <h3>Aktuelle Themen aus der Finanzwelt</h3>
-          <p>Hintergrundwissen zu Leitzinsen, Inflation, Rentenreform und Diversifikation.</p>
-        </a>
-      </div>
+
+      <blockquote class="quote-card fade-in">
+        <p>„Wer früh beginnt, lässt die Zeit für sich arbeiten.“</p>
+      </blockquote>
     </div>
   </section>
 
