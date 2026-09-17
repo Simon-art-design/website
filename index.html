@@ -21,7 +21,7 @@
 <!-- ===================== HEADER / NAVIGATION ===================== -->
 <header class="site-header" id="site-header">
   <div class="header-inner">
-    <a class="brand" href="index.html" aria-label="Horbach Wirtschaftsberatung, Startseite">
+    <a class="brand" href="#top" aria-label="Horbach Wirtschaftsberatung, Startseite">
       <span class="brand-badge">
         HORBACH
         <svg class="brand-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -32,19 +32,19 @@
     </a>
 
     <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
-      <a href="lebensphasen.html">Lebensphasen</a>
-      <a href="kinderaltersvorsorge.html">Kinderaltersvorsorge</a>
-      <a href="vermoegensaufbau.html">Vermögensaufbau</a>
-      <a href="altersvorsorge.html">Altersvorsorge</a>
-      <a href="berufsunfaehigkeit.html">Berufsunfähigkeit</a>
-      <a href="krankenversicherung.html">Krankenversicherung</a>
-      <a href="absicherung.html">Absicherung</a>
-      <a href="news.html">News</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="#lebensphasen">Lebensphasen</a>
+      <a href="#kinderaltersvorsorge">Kinderaltersvorsorge</a>
+      <a href="#vermoegensaufbau">Vermögensaufbau</a>
+      <a href="#altersvorsorge">Altersvorsorge</a>
+      <a href="#berufsunfaehigkeit">Berufsunfähigkeit</a>
+      <a href="#krankenversicherung">Krankenversicherung</a>
+      <a href="#absicherung">Absicherung</a>
+      <a href="#news">News</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
 
     <div class="header-actions">
-      <a class="btn btn-primary btn-small" href="kontakt.html">Beratungstermin</a>
+      <a class="btn btn-primary btn-small" href="#kontakt">Beratungstermin</a>
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
       </button>
@@ -52,11 +52,15 @@
   </div>
 </header>
 
-<main>
+<main id="top">
 
 <section class="hero" aria-labelledby="hero-heading">
     <div class="section-inner hero-inner">
       <div class="hero-copy fade-in">
+        <div class="leitsatz fade-in">
+        <p>„Alle Menschen verdienen finanziellen Schutz und wirtschaftliche Freiheit.“</p>
+        <cite>— Michael Horbach</cite>
+      </div>
         <p class="eyebrow">Finanz- &amp; Versicherungsberatung</p>
         <h1 id="hero-heading">Für Ihre Zukunft beginnt der richtige Moment heute.</h1>
         <p class="hero-sub">
@@ -64,8 +68,8 @@
           eine Strategie, die zu Ihrer Lebensphase passt. Unabhängig, persönlich und ohne Verkaufsdruck.
         </p>
         <div class="hero-ctas">
-          <a class="btn btn-primary" href="kontakt.html">Beratungsgespräch anfragen</a>
-          <a class="btn btn-ghost" href="altersvorsorge.html#rechner">Zum Altersvorsorge-Rechner</a>
+          <a class="btn btn-primary" href="#kontakt">Beratungsgespräch anfragen</a>
+          <a class="btn btn-ghost" href="#rechner">Zum Zinseszins-Rechner</a>
         </div>
       </div>
 
@@ -86,58 +90,716 @@
       </div>
     </div>
   </section>
-  <!-- ===================== THEMENUEBERSICHT ===================== -->
-  <section class="section" id="themen" aria-labelledby="themen-heading">
+
+<section class="section" id="lebensphasen" aria-labelledby="lebensphasen-heading">
     <div class="section-inner">
-      <p class="eyebrow">Themen im Überblick</p>
-      <h2 id="themen-heading">Jeder Bereich auf einen Blick</h2>
+      <p class="eyebrow">Lebensphasen</p>
+      <h2 id="lebensphasen-heading">Jede Phase des Lebens braucht ihren eigenen Plan</h2>
       <p class="section-intro">
-        Wählen Sie ein Thema, um mehr zu erfahren. Am Ende jeder Seite erreichen Sie direkt
-        die Kontaktmöglichkeit für ein unverbindliches Gespräch.
+        Finanzielle Bedürfnisse verändern sich mit dem Leben. Eine gute Beratung berücksichtigt,
+        in welcher Phase Sie oder Ihre Familie gerade stehen – und passt die Lösung entsprechend an.
       </p>
-      <div class="topic-grid">
-        <a class="topic-card fade-in" href="lebensphasen.html">
-          <p class="eyebrow">Lebensphasen</p>
-          <h3>Jede Phase des Lebens braucht ihren eigenen Plan</h3>
-          <p>Finanzielle Bedürfnisse verändern sich mit dem Leben – von der Kindheit bis zum Ruhestand.</p>
-        </a>
-        <a class="topic-card fade-in" href="kinderaltersvorsorge.html">
-          <p class="eyebrow">Kinderaltersvorsorge</p>
-          <h3>Der beste Zeitpunkt ist jetzt</h3>
-          <p>Warum der Zeitvorteil bei einem frühen Start für Kinder besonders groß ist.</p>
-        </a>
-        <a class="topic-card fade-in" href="vermoegensaufbau.html">
-          <p class="eyebrow">Vermögensaufbau für Kinder</p>
-          <h3>Kapital aufbauen, unabhängig von Versicherung</h3>
-          <p>Reiner Kapitalaufbau per ETF-Sparplan, Junior-Depot oder fondsgebundener Sparform.</p>
-        </a>
-        <a class="topic-card fade-in" href="altersvorsorge.html">
-          <p class="eyebrow">Altersvorsorge</p>
-          <h3>Wo die gesetzliche Rente nicht ausreicht</h3>
-          <p>Gesetzliche Rente, Rürup-Rente und Altersvorsorgedepot im Zusammenspiel — inklusive
-            interaktivem Rechner mit Rürup-Umschalter.</p>
-        </a>
-        <a class="topic-card fade-in" href="berufsunfaehigkeit.html">
-          <p class="eyebrow">Berufsunfähigkeit</p>
-          <h3>Ihre Arbeitskraft zuverlässig abgesichert</h3>
-          <p>Warum die eigene Arbeitskraft der wichtigste Vermögenswert überhaupt ist.</p>
-        </a>
-        <a class="topic-card fade-in" href="krankenversicherung.html">
-          <p class="eyebrow">Krankenversicherung</p>
-          <h3>Privat und gesetzlich im Vergleich</h3>
-          <p>Unabhängige Beratung zu PKV und GKV, abgestimmt auf Ihre Lebenssituation.</p>
-        </a>
-        <a class="topic-card fade-in" href="absicherung.html">
-          <p class="eyebrow">Sachversicherungen</p>
-          <h3>Ihr Eigentum zuverlässig abgesichert</h3>
-          <p>Von der Privathaftpflicht bis zur Wohngebäudeversicherung im Überblick.</p>
-        </a>
-        <a class="topic-card fade-in" href="news.html">
-          <p class="eyebrow">News</p>
-          <h3>Aktuelle Themen aus der Finanzwelt</h3>
-          <p>Hintergrundwissen zu Leitzinsen, Inflation, Rentenreform und Diversifikation.</p>
-        </a>
+
+      <div class="stat-grid">
+        <div class="stat-card fade-in">
+          <p class="stat-number">4</p>
+          <p class="stat-label">Lebensphasen mit jeweils eigenem Absicherungs- und Vorsorgebedarf</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">⟳</p>
+          <p class="stat-label">Anpassung jederzeit möglich, wenn sich die Lebenssituation ändert</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">1</p>
+          <p class="stat-label">Ansprechpartner für alle Phasen — statt viele einzelne Verträge</p>
+        </div>
       </div>
+
+      <div class="phase-grid">
+        <article class="phase-card fade-in">
+          <div class="phase-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none"><path d="M12 3v4M12 3c-3 1-4 4-4 6a4 4 0 008 0c0-2-1-5-4-6z" stroke="#32362B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 21c1.5-3 4-4 8-4s6.5 1 8 4" stroke="#32362B" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Früh</h3>
+          <p class="phase-sub">Kindergarten &amp; Schule</p>
+          <p>Die Grundlagen für finanzielle Sicherheit lassen sich schon in den ersten Lebensjahren
+            legen – mit kleinen Beiträgen und viel Zeit zum Wachsen.</p>
+        </article>
+
+        <article class="phase-card fade-in">
+          <div class="phase-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none"><path d="M12 4L2 9l10 5 10-5-10-5z" stroke="#32362B" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 11.5v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" stroke="#32362B" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Ausbildung</h3>
+          <p class="phase-sub">Lernen &amp; Aufbruch</p>
+          <p>Führerschein, Studium, erste eigene Wohnung: Wer früh vorsorgt, steht in dieser
+            Phase finanziell auf sicherem Boden.</p>
+        </article>
+
+        <article class="phase-card fade-in">
+          <div class="phase-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none"><path d="M3 21V10l9-6 9 6v11" stroke="#32362B" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><path d="M9 21v-6h6v6" stroke="#32362B" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Eigenständigkeit</h3>
+          <p class="phase-sub">Beruf &amp; Familie</p>
+          <p>Berufseinstieg, Familiengründung, Eigentum – jetzt zählt eine Absicherung, die
+            mitwächst und zur eigenen Lebensplanung passt.</p>
+        </article>
+
+        <article class="phase-card fade-in">
+          <div class="phase-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none"><circle cx="12" cy="12" r="4.5" stroke="#32362B" stroke-width="1.6"/><path d="M12 3v2.2M12 18.8V21M4.2 12H3M21 12h-1.2M6 6l1.4 1.4M18 6l-1.4 1.4M6 18l1.4-1.4M18 18l-1.4-1.4" stroke="#32362B" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Alter</h3>
+          <p class="phase-sub">Ruhestand &amp; Vorsorge</p>
+          <p>Mit sinkendem gesetzlichen Rentenniveau wird private Vorsorge zum zentralen
+            Baustein für einen sorgenfreien Lebensabend.</p>
+        </article>
+      </div>
+
+      <div class="text-block">
+        <h3>Warum sich Lebensphasen-Planung lohnt</h3>
+        <p>
+          Wer seine Absicherung nur einmal plant und danach nie wieder anschaut, läuft Gefahr, dass
+          Verträge nicht mehr zur aktuellen Lebenssituation passen. Eine Betrachtung entlang der
+          eigenen Lebensphasen macht sichtbar, wo Schutzbedarf entsteht, wo er wieder abnimmt und wo
+          sich zusätzlicher Spielraum für den Vermögensaufbau ergibt. So bleibt die Absicherung im
+          Gleichschritt mit dem eigenen Leben – nicht andersherum.
+        </p>
+      </div>
+
+      <blockquote class="quote-card fade-in">
+        <p>„Jede Lebensphase verdient ihren eigenen Plan.“</p>
+      </blockquote>
+    </div>
+  </section>
+
+<section class="section" id="kinderaltersvorsorge" aria-labelledby="kav-heading">
+    <div class="section-inner">
+      <p class="eyebrow">Kinderaltersvorsorge</p>
+      <h2 id="kav-heading">Der beste Zeitpunkt für die Zukunft Ihres Kindes ist jetzt</h2>
+
+      <div class="stat-grid">
+        <div class="stat-card fade-in">
+          <p class="stat-number">↓</p>
+          <p class="stat-label">Sinkendes gesetzliches Rentenniveau</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">18+</p>
+          <p class="stat-label">Jahre Zeitvorteil bei frühem Start</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">1×</p>
+          <p class="stat-label">Kindheit — Versäumtes lässt sich nur mit höherem Aufwand nachholen</p>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <h3>Warum der Zeitvorteil bei Kindern besonders groß ist</h3>
+        <p>
+          Der Zinseszinseffekt entfaltet seine größte Wirkung über lange Zeiträume. Wer schon in den
+          ersten Lebensjahren eines Kindes mit dem Sparen beginnt, verschafft dem eingezahlten Kapital
+          bis zu 18 Jahre Zeit zum Wachsen – deutlich mehr, als es bei einem späteren Start möglich wäre.
+          Hinzu kommt: Kinder sind in der Regel gesund, wodurch sich Risikobausteine wie eine
+          Berufsunfähigkeitsabsicherung zu besonders günstigen Konditionen einschließen lassen.
+          Jedes Jahr, das ungenutzt verstreicht, muss später mit einem höheren monatlichen Beitrag
+          ausgeglichen werden, um dasselbe Ziel zu erreichen.
+        </p>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-card fade-in">
+          <h3>Heutige Tarifkonditionen sichern</h3>
+          <p>Wer früh abschließt, sichert sich die zum Vertragsbeginn gültigen Konditionen –
+            unabhängig davon, wie sich Gesundheit oder Markt später entwickeln.</p>
+        </div>
+        <div class="trust-card fade-in">
+          <h3>Gesundheitsprüfung im Kindesalter</h3>
+          <p>Bausteine zur Berufsunfähigkeitsabsicherung lassen sich im gesunden Kindesalter meist
+            leichter und ohne Ausschlüsse einschließen als in späteren Lebensjahren.</p>
+        </div>
+        <div class="trust-card fade-in">
+          <h3>100&nbsp;% unabhängige Beratung</h3>
+          <p>Horbach hat keine eigenen Versicherungs- oder Fondsprodukte. Die Auswahl erfolgt frei
+            aus dem gesamten Markt, ausgerichtet an Ihren Bedürfnissen.</p>
+        </div>
+      </div>
+
+      <blockquote class="quote-card fade-in">
+        <p>„Was ein Kind heute geschenkt bekommt, muss es später nicht mehr nachholen.“</p>
+      </blockquote>
+    </div>
+  </section>
+
+<section class="section section-alt" id="vermoegensaufbau" aria-labelledby="vermoegen-heading">
+    <div class="section-inner">
+      <p class="eyebrow">Neu · Vermögensaufbau für Kinder</p>
+      <h2 id="vermoegen-heading">Kapital aufbauen, unabhängig von Versicherung</h2>
+      <p class="section-intro">
+        Neben der versicherungsbasierten Kinderaltersvorsorge gibt es einen zweiten, eigenständigen
+        Weg, finanziell für Kinder vorzusorgen: den reinen Vermögensaufbau über Kapitalanlagen –
+        etwa per ETF-Sparplan, Junior-Depot oder fondsgebundener Sparform. Anders als bei einer
+        Versicherungslösung steht hier ausschließlich der Kapitalaufbau im Vordergrund, ohne
+        eingeschlossenen biometrischen Schutz.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-card fade-in">
+          <p class="stat-number">15+</p>
+          <p class="stat-label">Jahre üblicher Anlagehorizont bis zur Volljährigkeit</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">ab 25&nbsp;€</p>
+          <p class="stat-label">monatlicher Einstieg möglich</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">3</p>
+          <p class="stat-label">gängige Bausteine: ETF-Sparplan, Junior-Depot, fondsgebundener Sparplan</p>
+        </div>
+      </div>
+
+      <div class="benefit-grid">
+        <div class="benefit-card fade-in">
+          <h3>Marktschwankungen glätten sich</h3>
+          <p>Ein langer Anlagehorizont von 15–18 Jahren gleicht kurzfristige Schwankungen an den
+            Kapitalmärkten in der Regel deutlich aus.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <h3>Kleine Beträge genügen</h3>
+          <p>Bereits geringe monatliche Sparraten reichen aus, um über die Zeit ein spürbares
+            Kapital aufzubauen.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <h3>Basis für wichtige Meilensteine</h3>
+          <p>Führerschein, Studium oder die erste eigene Wohnung: Eine finanzielle Basis entsteht
+            fast nebenbei, ohne spürbare Belastung im Alltag.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <h3>Übertragbar an das Kind</h3>
+          <p>Ein Depot lässt sich zu einem späteren Zeitpunkt auf das Kind übertragen, sodass es
+            selbst über das aufgebaute Kapital verfügen kann.</p>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <h3>Warum Zeit der wichtigste Faktor ist</h3>
+        <p>
+          Beim reinen Vermögensaufbau zählt vor allem eines: Zeit im Markt. Wer früh beginnt, muss
+          weniger einzahlen, um am Ende ein vergleichbares Ergebnis zu erreichen, weil der
+          Wertzuwachs über einen längeren Zeitraum wirken kann. Kurzfristige Kursschwankungen
+          verlieren mit wachsendem Anlagehorizont zunehmend an Bedeutung, während der eigentliche
+          Zinseszinseffekt an Gewicht gewinnt.
+        </p>
+      </div>
+
+      <p class="cross-link">
+        Wie sich unterschiedliche Sparraten und Laufzeiten konkret auswirken, lässt sich mit dem
+        <a href="#rechner">Zinseszins-Rechner weiter oben</a> anschaulich durchspielen.
+      </p>
+
+      <p class="disclaimer">
+        Hinweis: Diese Informationen dienen der allgemeinen Orientierung und stellen keine
+        individuelle Anlageberatung dar. Für eine auf Ihre persönliche Situation abgestimmte
+        Empfehlung vereinbaren Sie gerne ein unverbindliches Gespräch.
+      </p>
+
+      <blockquote class="quote-card fade-in">
+        <p>„Kleine Beträge, früh angelegt, wirken über die Zeit oft stärker als große Beträge, die spät beginnen.“</p>
+      </blockquote>
+    </div>
+  </section>
+
+<section class="section" id="altersvorsorge" aria-labelledby="altersvorsorge-heading">
+    <div class="section-inner">
+      <p class="eyebrow">Altersvorsorge</p>
+      <h2 id="altersvorsorge-heading">Privat vorsorgen, wo die gesetzliche Rente nicht ausreicht</h2>
+      <p class="section-intro">
+        Die gesetzliche Rente allein reicht für die meisten Menschen nicht aus, um den gewohnten
+        Lebensstandard im Alter zu halten. Je früher eine private Ergänzung aufgebaut wird, desto
+        mehr Auswahl bleibt bei der passenden Lösung.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-card fade-in">
+          <p class="stat-number">↓</p>
+          <p class="stat-label">Sinkendes Rentenniveau als langfristiger Trend</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">3</p>
+          <p class="stat-label">Bausteine: gesetzliche Rente, Rürup-Rente, Altersvorsorgedepot</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">1</p>
+          <p class="stat-label">persönliches Gespräch für die individuell passende Kombination</p>
+        </div>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-card fade-in">
+          <h3>Gesetzliche Rente &amp; Vorsorgelücke</h3>
+          <p>Das Rentenniveau aus der gesetzlichen Rentenversicherung sinkt seit Jahren tendenziell.
+            Zwischen dem zuletzt erzielten Nettoeinkommen und der späteren gesetzlichen Rente entsteht
+            so bei vielen Menschen eine spürbare Lücke, die sich am ehesten durch private Vorsorge
+            schließen lässt.</p>
+        </div>
+        <div class="trust-card fade-in">
+          <h3>Rürup-Rente (Basisrente)</h3>
+          <p>Die Rürup-Rente eignet sich besonders für Selbstständige und Gutverdiener ohne Zugang
+            zur betrieblichen Altersvorsorge. Eingezahlte Beiträge lassen sich steuerlich als
+            Sonderausgaben geltend machen; im Gegenzug zahlt sie im Alter eine lebenslange Rente und
+            ist nicht vorzeitig kapitalisierbar.</p>
+        </div>
+        <div class="trust-card fade-in">
+          <h3>Altersvorsorgedepot</h3>
+          <p>Das Altersvorsorgedepot ist ein neuerer, kapitalmarktbasierter Baustein der privaten
+            Altersvorsorge mit freier Fondsauswahl und geringen Kosten. Da sich die gesetzlichen
+            Rahmenbedingungen hierzu weiterentwickeln, lohnt sich ein persönliches Gespräch zum
+            aktuellen Stand.</p>
+        </div>
+      </div>
+
+      <div class="text-block" id="rechner">
+        <h3>Selbst rechnen: Sparplan oder Rürup-Rente</h3>
+        <p>
+          Verändern Sie die Regler und beobachten Sie, wie sich monatliche Sparrate, Anlagedauer
+          und Rendite auf das Ergebnis auswirken. Über den Umschalter lässt sich zwischen einem
+          klassischen Sparplan und einer vereinfachten Rürup-Rente-Beispielrechnung wechseln. Die
+          Berechnung erfolgt vollständig in Ihrem Browser.
+        </p>
+      </div>
+
+      <div class="calculator fade-in">
+        <div class="calculator-mode-toggle" role="tablist" aria-label="Rechner-Modus wählen">
+          <button type="button" class="mode-btn is-active" id="mode-sparplan" role="tab" aria-selected="true">
+            Klassischer Sparplan
+          </button>
+          <button type="button" class="mode-btn" id="mode-ruerup" role="tab" aria-selected="false">
+            Rürup-Rente (Basisrente)
+          </button>
+        </div>
+
+        <div class="calculator-controls">
+
+          <div class="control">
+            <label for="rate-input">Monatliche Sparrate</label>
+            <input type="range" id="rate-input" min="25" max="1000" step="5" value="100"
+                   aria-describedby="rate-value">
+            <output id="rate-value" for="rate-input">100&nbsp;€</output>
+          </div>
+
+          <div class="control">
+            <label for="years-input">Anlagedauer (Jahre)</label>
+            <input type="range" id="years-input" min="1" max="70" step="1" value="18"
+                   aria-describedby="years-value">
+            <output id="years-value" for="years-input">18&nbsp;Jahre</output>
+          </div>
+
+          <div class="control">
+            <label for="return-input">Angenommene Rendite p.&nbsp;a.</label>
+            <input type="range" id="return-input" min="0" max="10" step="0.5" value="5"
+                   aria-describedby="return-value">
+            <output id="return-value" for="return-input">5,0&nbsp;%</output>
+          </div>
+
+          <div class="control" id="control-taxrate" hidden>
+            <label for="taxrate-input">Persönlicher Steuersatz (Ansparphase)</label>
+            <input type="range" id="taxrate-input" min="20" max="45" step="1" value="30"
+                   aria-describedby="taxrate-value">
+            <output id="taxrate-value" for="taxrate-input">30&nbsp;%</output>
+          </div>
+        </div>
+
+        <div class="calculator-result">
+          <div class="chart-wrap" role="img" aria-label="Balkendiagramm: eigene Einzahlungen im Vergleich zum Wertzuwachs durch Zinseszins">
+            <div class="chart">
+              <div class="chart-bar">
+                <div class="chart-bar-fill chart-bar-einzahlung" id="bar-einzahlung"></div>
+              </div>
+              <div class="chart-bar">
+                <div class="chart-bar-fill chart-bar-zuwachs" id="bar-zuwachs"></div>
+              </div>
+            </div>
+            <div class="chart-labels">
+              <span><i class="legend-dot legend-dot-a"></i>Eigene Einzahlungen</span>
+              <span><i class="legend-dot legend-dot-b"></i>Wertzuwachs durch Zinseszins</span>
+            </div>
+          </div>
+
+          <div class="result-numbers">
+            <div class="result-line">
+              <span>Eigene Einzahlungen</span>
+              <strong id="out-einzahlung">21.600&nbsp;€</strong>
+            </div>
+            <div class="result-line">
+              <span>Wertzuwachs durch Zinseszins</span>
+              <strong id="out-zuwachs">13.285&nbsp;€</strong>
+            </div>
+            <div class="result-line result-line-total">
+              <span id="out-total-label">Gesamt-Endwert</span>
+              <strong id="out-total">34.885&nbsp;€</strong>
+            </div>
+
+            <div id="ruerup-extra" hidden>
+              <div class="result-line">
+                <span>Geschätzte monatliche Rürup-Rente (lebenslang)</span>
+                <strong id="out-ruerup-rente">0&nbsp;€</strong>
+              </div>
+              <div class="result-line">
+                <span>Geschätzte Steuerersparnis pro Jahr (Ansparphase)</span>
+                <strong id="out-steuerersparnis">0&nbsp;€</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="disclaimer">
+        Hinweis: Diese Berechnung ist eine unverbindliche Beispielrechnung und dient ausschließlich
+        der Veranschaulichung des Zinseszinseffekts. Sie stellt keine Anlage-, Steuer- oder
+        Rentenberatung dar und ist keine Garantie für eine künftige Wertentwicklung.
+        Kapitalanlagen unterliegen Chancen und Risiken. Bei der Rürup-Rente sind die geschätzte
+        monatliche Rente und die Steuerersparnis stark vereinfachte Näherungswerte (angenommene
+        Rentenbezugsdauer von 20 Jahren, ohne Berücksichtigung der jährlich geltenden steuerlichen
+        Höchstbeträge oder individueller Lebenserwartung); die tatsächliche Rentenhöhe legt der
+        jeweilige Versicherer im Vertrag fest.
+      </p>
+
+      <blockquote class="quote-card fade-in">
+        <p>„Wer früh beginnt, lässt die Zeit für sich arbeiten.“</p>
+      </blockquote>
+
+      <div class="text-block">
+        <h3>Warum sich ein frühzeitiger Blick auf die Altersvorsorge lohnt</h3>
+        <p>
+          Die Kombination aus gesetzlicher Rente und privater Vorsorge entscheidet darüber, wie groß
+          der finanzielle Spielraum im Ruhestand tatsächlich ist. Je früher sich jemand mit der
+          eigenen Vorsorgesituation auseinandersetzt, desto mehr Zeit bleibt, um Lücken schrittweise
+          und mit überschaubaren Beiträgen zu schließen – statt kurz vor dem Ruhestand große Summen
+          nachholen zu müssen.
+        </p>
+      </div>
+
+      <p class="disclaimer">
+        Hinweis: Die vorstehenden Informationen sind allgemeiner Natur und stellen keine individuelle
+        Steuer- oder Anlageberatung dar. Ob und in welcher Form sich ein Produkt für Ihre Situation
+        eignet, klären wir am besten in einem persönlichen Gespräch.
+      </p>
+
+      <blockquote class="quote-card fade-in">
+        <p>„Die beste Altersvorsorge ist die, die tatsächlich zur eigenen Lebenssituation passt.“</p>
+      </blockquote>
+    </div>
+  </section>
+
+<section class="section" id="berufsunfaehigkeit" aria-labelledby="bu-heading">
+    <div class="section-inner">
+      <p class="eyebrow">Berufsunfähigkeitsversicherung</p>
+      <h2 id="bu-heading">Ihre Arbeitskraft zuverlässig abgesichert</h2>
+      <p class="section-intro">
+        Die eigene Arbeitskraft ist für die meisten Menschen der wertvollste finanzielle Baustein
+        überhaupt. Simon Langkabel berät hierzu vollständig unabhängig – mit freier Auswahl aus dem
+        gesamten Markt.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-card fade-in">
+          <p class="stat-number">100&nbsp;%</p>
+          <p class="stat-label">unabhängig — keine eigenen Versicherungsprodukte</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">3</p>
+          <p class="stat-label">entscheidende Kriterien: Gesundheitsprüfung, Verweisung, Nachversicherungsgarantie</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">1</p>
+          <p class="stat-label">Einkommen, das es zu schützen gilt — Ihre Arbeitskraft</p>
+        </div>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-card fade-in">
+          <h3>Warum sie wichtig ist</h3>
+          <p>Ohne ausreichenden Schutz drohen bei Berufsunfähigkeit erhebliche Einkommenseinbußen,
+            während laufende Kosten wie Miete oder Kredite unverändert weiterlaufen.</p>
+        </div>
+        <div class="trust-card fade-in">
+          <h3>Worauf es ankommt</h3>
+          <p>Entscheidend sind unter anderem eine ehrliche Gesundheitsprüfung, der Verzicht auf
+            abstrakte Verweisung und eine Nachversicherungsgarantie für spätere Anpassungen.</p>
+        </div>
+        <div class="trust-card fade-in">
+          <h3>Der richtige Zeitpunkt</h3>
+          <p>Je jünger und gesünder man bei Vertragsabschluss ist, desto einfacher und günstiger
+            lässt sich der Schutz in der Regel vereinbaren.</p>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <h3>Warum die eigene Arbeitskraft der wichtigste Vermögenswert ist</h3>
+        <p>
+          Über ein gesamtes Berufsleben betrachtet, übersteigt das erzielbare Einkommen meist jeden
+          anderen Vermögenswert deutlich. Fällt dieses Einkommen durch Krankheit oder Unfall
+          dauerhaft aus, gerät die gesamte Lebensplanung ins Wanken – unabhängig davon, wie sorgfältig
+          zuvor gespart oder investiert wurde. Eine Berufsunfähigkeitsversicherung schließt genau
+          diese Lücke.
+        </p>
+      </div>
+
+      <blockquote class="quote-card fade-in">
+        <p>„Vermögen aufzubauen lohnt sich nur, wenn das Einkommen dahinter auch abgesichert ist.“</p>
+      </blockquote>
+    </div>
+  </section>
+
+<section class="section" id="krankenversicherung" aria-labelledby="krankenversicherung-heading">
+    <div class="section-inner">
+      <p class="eyebrow">Krankenversicherung</p>
+      <h2 id="krankenversicherung-heading">Private und gesetzliche Krankenversicherung im Vergleich</h2>
+      <p class="section-intro">
+        Ob privat oder gesetzlich versichert: Simon Langkabel berät zu beiden Systemen vollständig
+        unabhängig und stellt die jeweiligen Vor- und Nachteile im Zusammenhang mit Ihrer
+        persönlichen Situation dar.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-card fade-in">
+          <p class="stat-number">2</p>
+          <p class="stat-label">Systeme im Vergleich: privat und gesetzlich</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">100&nbsp;%</p>
+          <p class="stat-label">unabhängig — freie Auswahl aus dem gesamten Markt</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">1</p>
+          <p class="stat-label">Ansprechpartner für den gesamten Marktvergleich</p>
+        </div>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-card fade-in">
+          <h3>Private Krankenversicherung (PKV)</h3>
+          <p>Für Beamtinnen und Beamte, Selbstständige sowie Angestellte oberhalb der
+            Versicherungspflichtgrenze kann eine private Krankenversicherung passende Leistungen zu
+            individuell zugeschnittenen Tarifen bieten. Ein sorgfältiger Anbietervergleich und eine
+            realistische Einschätzung der langfristigen Beitragsentwicklung sind dabei entscheidend.</p>
+        </div>
+        <div class="trust-card fade-in">
+          <h3>Gesetzliche Krankenversicherung (GKV)</h3>
+          <p>Auch innerhalb der gesetzlichen Krankenversicherung gibt es Gestaltungsspielraum – von
+            der Wahl der Krankenkasse über Wahltarife bis hin zu sinnvollen privaten
+            Zusatzversicherungen, etwa für Zahnersatz, Krankentagegeld oder Auslandsaufenthalte.</p>
+        </div>
+        <div class="trust-card fade-in">
+          <h3>Vergleich &amp; Wechselüberlegungen</h3>
+          <p>Ob sich ein Wechsel zwischen gesetzlicher und privater Krankenversicherung lohnt, hängt
+            von individuellen Faktoren wie Einkommen, Familienstand und langfristigen Plänen ab. Ein
+            sorgfältiger Vergleich beider Systeme schafft Klarheit, bevor eine Entscheidung getroffen
+            wird.</p>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <h3>Warum der Vergleich beider Systeme zählt</h3>
+        <p>
+          Die Entscheidung zwischen privater und gesetzlicher Krankenversicherung wirkt oft über
+          Jahrzehnte nach und lässt sich später nur schwer korrigieren. Wer beide Systeme mit Blick
+          auf die eigene berufliche und familiäre Situation vergleicht, trifft eine belastbarere
+          Entscheidung als bei einer Wahl nach Bauchgefühl.
+        </p>
+      </div>
+
+      <p class="info-box">
+        100&nbsp;% unabhängige Beratung: Horbach vertreibt keine eigenen Versicherungsprodukte und
+        ist an keinen Anbieter gebunden. Ob privat oder gesetzlich krankenversichert — die
+        Empfehlung richtet sich ausschließlich nach Ihrem Bedarf.
+      </p>
+
+      <blockquote class="quote-card fade-in">
+        <p>„Die richtige Krankenversicherung ist die, die zu Ihrer Lebenssituation passt — nicht die, die am lautesten beworben wird.“</p>
+      </blockquote>
+    </div>
+  </section>
+
+<section class="section section-alt" id="absicherung" aria-labelledby="absicherung-heading">
+    <div class="section-inner">
+      <p class="eyebrow">Sachversicherungen</p>
+      <h2 id="absicherung-heading">Ihr Eigentum zuverlässig abgesichert</h2>
+      <p class="section-intro">
+        Neben der Vorsorge für später zählt auch der Schutz des Hier und Jetzt: Sachversicherungen
+        bewahren Eigentum und Vermögen vor den finanziellen Folgen unvorhergesehener Schäden.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-card fade-in">
+          <p class="stat-number">6</p>
+          <p class="stat-label">gängige Sachversicherungen im Überblick</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">100&nbsp;%</p>
+          <p class="stat-label">unabhängiger Vergleich aus dem gesamten Markt</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">1</p>
+          <p class="stat-label">Ansprechpartner für alle Verträge</p>
+        </div>
+      </div>
+
+      <div class="insurance-grid">
+        <div class="benefit-card fade-in">
+          <h3>Privathaftpflichtversicherung</h3>
+          <p>Schützt vor den finanziellen Folgen, wenn Sie im Alltag versehentlich einer anderen
+            Person einen Schaden zufügen.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <h3>Hausratversicherung</h3>
+          <p>Sichert Möbel, Elektronik und persönliche Gegenstände in der Wohnung gegen Schäden
+            durch Feuer, Einbruch oder Leitungswasser ab.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <h3>Wohngebäudeversicherung</h3>
+          <p>Schützt das Gebäude selbst, etwa bei Sturm-, Hagel- oder Feuerschäden – für
+            Eigentümerinnen und Eigentümer eine zentrale Absicherung.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <h3>Kfz-Versicherung</h3>
+          <p>Von der gesetzlich vorgeschriebenen Haftpflicht bis zur Kaskoversicherung: Schutz für
+            Fahrzeug und Unfallfolgen.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <h3>Rechtsschutzversicherung</h3>
+          <p>Übernimmt Kosten für Anwalt und Gericht, damit rechtliche Auseinandersetzungen nicht
+            zur finanziellen Belastung werden.</p>
+        </div>
+        <div class="benefit-card fade-in">
+          <h3>Tierhalterhaftpflichtversicherung</h3>
+          <p>Deckt Schäden ab, die durch das eigene Haustier – etwa den Hund – gegenüber Dritten
+            verursacht werden.</p>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <h3>Warum sich ein regelmäßiger Blick auf Sachversicherungen lohnt</h3>
+        <p>
+          Verträge zu Hausrat, Wohngebäude oder Haftpflicht werden oft einmal abgeschlossen und
+          dann jahrelang nicht mehr überprüft – obwohl sich Lebensumstände, Werte und Bedarf
+          verändern. Ein regelmäßiger Check verhindert doppelten Schutz genauso wie gefährliche
+          Lücken und sorgt dafür, dass die Beiträge zum tatsächlichen Bedarf passen.
+        </p>
+      </div>
+
+      <blockquote class="quote-card fade-in">
+        <p>„Guter Schutz fällt nicht auf, bis er gebraucht wird — dann zählt jedes Detail.“</p>
+      </blockquote>
+    </div>
+  </section>
+
+<section class="section" id="unabhaengigkeit" aria-labelledby="unabhaengig-heading">
+    <div class="section-inner">
+      <p class="eyebrow">Unabhängigkeit &amp; Flexibilität</p>
+      <h2 id="unabhaengig-heading">Unabhängig beraten. Flexibel bleiben.</h2>
+      <p class="section-intro">
+        Unabhängigkeit ist kein Werbeversprechen, sondern die Grundlage jeder Empfehlung von
+        Horbach – in jedem der vorgestellten Bereiche, von der Kinderaltersvorsorge bis zur
+        Sachversicherung.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-card fade-in">
+          <p class="stat-number">0</p>
+          <p class="stat-label">eigene Versicherungs- oder Fondsprodukte</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">100&nbsp;%</p>
+          <p class="stat-label">freie Auswahl aus dem gesamten Markt</p>
+        </div>
+        <div class="stat-card fade-in">
+          <p class="stat-number">0&nbsp;€</p>
+          <p class="stat-label">Zusatzkosten für spätere Anpassungen innerhalb fondsgebundener Lösungen</p>
+        </div>
+      </div>
+
+      <div class="flex-grid">
+        <div class="flex-card fade-in">
+          <h3>100&nbsp;% unabhängige Beratung</h3>
+          <p>Als unabhängiger Berater ist Horbach an keinen einzelnen Anbieter gebunden. Die
+            Produktauswahl erfolgt frei aus dem gesamten Markt – ausschließlich zu Ihren Gunsten.</p>
+        </div>
+        <div class="flex-card fade-in">
+          <h3>Flexibel innerhalb der Anlage</h3>
+          <p>Innerhalb fondsgebundener Lösungen lässt sich die Anlagestrategie jederzeit anpassen –
+            ohne Zusatzkosten und ohne den bestehenden Vertrag aufgeben zu müssen.</p>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <h3>Was Unabhängigkeit in der Praxis bedeutet</h3>
+        <p>
+          Unabhängige Beratung bedeutet nicht nur, dass kein Vertriebsdruck einzelner Anbieter
+          besteht. Sie bedeutet auch, dass eine einmal gewählte Lösung nicht in Stein gemeißelt ist:
+          Verändert sich Ihre Lebenssituation, lässt sich die Strategie anpassen – ohne dass Sie
+          deshalb den Anbieter wechseln oder einen neuen Vertrag abschließen müssen.
+        </p>
+      </div>
+
+      <blockquote class="quote-card fade-in">
+        <p>„Beratung, die sich nicht anpassen kann, ist keine Beratung mehr.“</p>
+      </blockquote>
+    </div>
+  </section>
+
+<section class="section" id="news" aria-labelledby="news-heading">
+    <div class="section-inner">
+      <p class="eyebrow">News</p>
+      <h2 id="news-heading">Aktuelle Themen aus der Finanzwelt</h2>
+      <p class="section-intro">
+        Ausgewählte Hintergrundinformationen zu Themen, die immer wieder für Beratungsgespräche
+        relevant sind. Die Beiträge werden regelmäßig aktualisiert und ersetzen keine individuelle
+        Beratung.
+      </p>
+
+      <div class="text-block">
+        <h3>Warum sich der Blick auf aktuelle Entwicklungen lohnt</h3>
+        <p>
+          Finanzielle Entscheidungen werden nicht im luftleeren Raum getroffen: Zinsniveau,
+          Inflation und politische Reformen verändern laufend die Rahmenbedingungen für Vorsorge
+          und Vermögensaufbau. Ein regelmäßiger Blick auf die wichtigsten Entwicklungen hilft, die
+          eigene Strategie im Blick zu behalten und bei Bedarf frühzeitig nachzusteuern.
+        </p>
+      </div>
+
+      <div class="news-grid">
+        <article class="benefit-card fade-in">
+          <h3>Leitzinsentscheidungen der EZB: Was sie für Sparer bedeuten</h3>
+          <p>Die Zinspolitik der Europäischen Zentralbank wirkt sich unmittelbar auf Spar- und
+            Anlagezinsen aus. Wer die Zusammenhänge kennt, kann die eigene Anlagestrategie gezielter
+            einordnen.</p>
+          <p class="placeholder">[Stand: Monat/Jahr einfügen]</p>
+        </article>
+        <article class="benefit-card fade-in">
+          <h3>Inflation und Realzins: Warum die Kaufkraft entscheidet</h3>
+          <p>Nicht die Nominalverzinsung, sondern die Rendite nach Abzug der Inflation bestimmt, ob
+            eine Geldanlage tatsächlich Vermögen aufbaut oder real nur Kaufkraft erhält.</p>
+          <p class="placeholder">[Stand: Monat/Jahr einfügen]</p>
+        </article>
+        <article class="benefit-card fade-in">
+          <h3>Rentenreform in Deutschland: Was sich ändert</h3>
+          <p>Die gesetzliche Rente und ihre private Ergänzung stehen immer wieder im Zentrum
+            politischer Reformdebatten. Ein regelmäßiger Überblick lohnt sich, um frühzeitig
+            reagieren zu können.</p>
+          <p class="placeholder">[Stand: Monat/Jahr einfügen]</p>
+        </article>
+        <article class="benefit-card fade-in">
+          <h3>Diversifikation: Warum Streuung Risiken abfedert</h3>
+          <p>Die Verteilung von Kapital auf verschiedene Anlageklassen und Regionen zählt zu den
+            wirksamsten Mitteln, um Schwankungen im Depot abzufedern.</p>
+          <p class="placeholder">[Stand: Monat/Jahr einfügen]</p>
+        </article>
+      </div>
+
+      <blockquote class="quote-card fade-in">
+        <p>„Wer informiert bleibt, trifft bessere Entscheidungen — gerade in unsicheren Zeiten.“</p>
+      </blockquote>
     </div>
   </section>
 
@@ -150,6 +812,24 @@
         100&nbsp;% unabhängige Beratung: Horbach vertreibt keine eigenen Produkte und wählt frei
         aus dem gesamten Markt, damit die Lösung zu Ihnen passt — nicht umgekehrt.
       </p>
+
+      <div class="trust-grid">
+        <div class="trust-card fade-in">
+          <h3>1. Unverbindliches Erstgespräch</h3>
+          <p>Wir klären in Ruhe Ihre Situation und Ihre Ziele — ohne Verpflichtung und ohne
+            Verkaufsdruck.</p>
+        </div>
+        <div class="trust-card fade-in">
+          <h3>2. Unabhängige Bedarfsanalyse</h3>
+          <p>Gemeinsam ordnen wir bestehende Verträge ein und identifizieren, wo tatsächlich
+            Handlungsbedarf besteht.</p>
+        </div>
+        <div class="trust-card fade-in">
+          <h3>3. Freie Empfehlung aus dem Gesamtmarkt</h3>
+          <p>Sie erhalten eine Empfehlung, die ausschließlich auf Ihren Bedarf zugeschnitten ist —
+            unabhängig von einzelnen Anbietern.</p>
+        </div>
+      </div>
 
       <div class="contact-grid">
         <div class="contact-card fade-in">
