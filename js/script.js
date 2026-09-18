@@ -92,6 +92,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ---------------- FAQ-Akkordeon ---------------- */
+  document.querySelectorAll('.faq-question').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var answer = document.getElementById(button.getAttribute('aria-controls'));
+      var isOpen = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      if (answer) answer.hidden = isOpen;
+    });
+  });
+
   /* ---------------- Fade-in beim Scrollen ---------------- */
   var fadeEls = document.querySelectorAll('.fade-in');
   if ('IntersectionObserver' in window) {
@@ -229,6 +239,88 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   calculate();
+
+  /* ---------------- Finanz-Check-Quiz ---------------- */
+  var quiz = document.getElementById('quiz');
+
+  if (quiz) {
+    var quizSteps = Array.prototype.slice.call(quiz.querySelectorAll('.quiz-step'));
+    var quizResult = document.getElementById('quiz-result');
+    var quizResultCards = document.getElementById('quiz-result-cards');
+    var quizProgressBar = document.getElementById('quiz-progress-bar');
+    var quizRestart = document.getElementById('quiz-restart');
+
+    var TOPIC_INFO = {
+      kav: { label: 'Kinderaltersvorsorge', href: '#kinderaltersvorsorge', desc: 'Versicherungsbasierte Vorsorge für Ihr Kind.' },
+      verm: { label: 'Vermögensaufbau für Kinder', href: '#vermoegensaufbau', desc: 'Reiner Kapitalaufbau, z. B. per ETF-Sparplan.' },
+      altersvorsorge: { label: 'Altersvorsorge', href: '#altersvorsorge', desc: 'Gesetzliche Rente, Rürup-Rente und Altersvorsorgedepot.' },
+      bu: { label: 'Berufsunfähigkeit', href: '#berufsunfaehigkeit', desc: 'Ihre Arbeitskraft zuverlässig absichern.' },
+      kv: { label: 'Krankenversicherung', href: '#krankenversicherung', desc: 'Privat und gesetzlich im Vergleich.' },
+      absicherung: { label: 'Sachversicherungen', href: '#absicherung', desc: 'Haftpflicht, Hausrat, Wohngebäude und mehr.' }
+    };
+
+    var quizScores = {};
+    var quizStepIndex = 0;
+
+    function showQuizStep(index) {
+      quizSteps.forEach(function (step, i) { step.hidden = i !== index; });
+      quizProgressBar.style.width = (((index + 1) / quizSteps.length) * 100) + '%';
+    }
+
+    function showQuizResult() {
+      quizSteps.forEach(function (step) { step.hidden = true; });
+      quizProgressBar.style.width = '100%';
+
+      var ranked = Object.keys(quizScores)
+        .filter(function (tag) { return quizScores[tag] > 0; })
+        .sort(function (a, b) { return quizScores[b] - quizScores[a]; })
+        .slice(0, 3);
+
+      quizResultCards.innerHTML = '';
+      ranked.forEach(function (tag) {
+        var info = TOPIC_INFO[tag];
+        if (!info) return;
+        var card = document.createElement('a');
+        card.className = 'quiz-result-card';
+        card.href = info.href;
+        card.innerHTML = '<h4>' + info.label + '</h4><p>' + info.desc + '</p>';
+        quizResultCards.appendChild(card);
+      });
+
+      quizResult.hidden = false;
+    }
+
+    function resetQuiz() {
+      quizScores = {};
+      quizStepIndex = 0;
+      quizResult.hidden = true;
+      showQuizStep(0);
+    }
+
+    quiz.querySelectorAll('.quiz-option').forEach(function (option) {
+      option.addEventListener('click', function () {
+        var tags = (option.getAttribute('data-tags') || '').split(',');
+        tags.forEach(function (pair) {
+          var parts = pair.split(':');
+          var tag = parts[0];
+          var weight = parseInt(parts[1], 10) || 0;
+          if (!tag) return;
+          quizScores[tag] = (quizScores[tag] || 0) + weight;
+        });
+
+        quizStepIndex += 1;
+        if (quizStepIndex < quizSteps.length) {
+          showQuizStep(quizStepIndex);
+        } else {
+          showQuizResult();
+        }
+      });
+    });
+
+    if (quizRestart) quizRestart.addEventListener('click', resetQuiz);
+
+    showQuizStep(0);
+  }
 
   /* ---------------- Kontaktformular (rein client-seitig) ---------------- */
   var form = document.getElementById('contact-form');
