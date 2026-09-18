@@ -5,6 +5,37 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  /* ---------------- Farbschema (hell/dunkel) ---------------- */
+  var themeToggle = document.getElementById('theme-toggle');
+  var THEME_KEY = 'horbach-theme';
+
+  if (themeToggle) {
+    function currentTheme() {
+      return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    }
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      themeToggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+      themeToggle.setAttribute(
+        'aria-label',
+        theme === 'dark' ? 'Helles Farbschema aktivieren' : 'Dunkles Farbschema aktivieren'
+      );
+    }
+
+    // Beim Laden an den bereits (per Inline-Skript im <head>) gesetzten Zustand anpassen
+    applyTheme(currentTheme());
+
+    themeToggle.addEventListener('click', function () {
+      var next = currentTheme() === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+    });
+  }
+
   /* ---------------- Mobile-Navigation ---------------- */
   var navToggle = document.getElementById('nav-toggle');
   var mainNav = document.getElementById('main-nav');

@@ -14,6 +14,13 @@
   --color-text: #2A2C22;
   --color-border: rgba(42, 44, 34, 0.14);
 
+  /* Rollen, die im Dark Mode umgedreht werden müssen (z. B. Button-Fläche
+     statt Button-Rand) — im Hellmodus identisch mit den Werten oben */
+  --color-chip-bg: #32362B;
+  --color-chip-text: #F7F3E7;
+  --color-header-bg: rgba(247, 243, 231, 0.82);
+  --color-hover-tint: rgba(42, 44, 34, 0.06);
+
   /* Typografie */
   --font-heading: "Fraunces", "Iowan Old Style", Georgia, serif;
   --font-body: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -23,6 +30,29 @@
   --radius-card: 12px;
   --radius-small: 8px;
   --max-width: 1120px;
+
+  color-scheme: light;
+}
+
+/* ==========================================================================
+   DARK MODE — per Toggle-Button gesetzt, in localStorage gemerkt
+   ========================================================================== */
+:root[data-theme="dark"] {
+  --color-cream: #1C1F16;
+  --color-cream-2: #242819;
+  --color-ink: #F1ECDC;
+  --color-olive-light: #B9D157;
+  --color-olive-dark: #9BB84A;
+  --color-card: #2C321F;
+  --color-text: #E7E3D3;
+  --color-border: rgba(241, 236, 220, 0.16);
+
+  --color-chip-bg: #B9D157;
+  --color-chip-text: #1C1F16;
+  --color-header-bg: rgba(28, 31, 22, 0.82);
+  --color-hover-tint: rgba(241, 236, 220, 0.08);
+
+  color-scheme: dark;
 }
 
 /* ---------- Reset & Grundlagen ---------- */
@@ -129,17 +159,17 @@ textarea:focus-visible {
 .btn:active { transform: translateY(1px); }
 
 .btn-primary {
-  background: var(--color-ink);
-  color: var(--color-cream);
+  background: var(--color-chip-bg);
+  color: var(--color-chip-text);
 }
-.btn-primary:hover { background: #24271e; }
+.btn-primary:hover { filter: brightness(0.92); }
 
 .btn-ghost {
   background: transparent;
   color: var(--color-ink);
   border-color: var(--color-border);
 }
-.btn-ghost:hover { background: rgba(42, 44, 34, 0.06); }
+.btn-ghost:hover { background: var(--color-hover-tint); }
 
 .btn-small { padding: 10px 18px; font-size: 0.88rem; }
 
@@ -150,7 +180,7 @@ textarea:focus-visible {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(247, 243, 231, 0.82);
+  background: var(--color-header-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border);
@@ -265,6 +295,25 @@ textarea:focus-visible {
   background: var(--color-cream-2);
   color: var(--color-olive-dark);
 }
+
+.theme-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+.theme-toggle:hover { background: var(--color-hover-tint); }
+.theme-toggle .icon-moon { display: block; }
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 
 /* Mobil: ein Hamburger-Menü mit allen Links */
 .main-nav {
@@ -435,8 +484,8 @@ textarea:focus-visible {
 }
 
 .quote-card {
-  background: var(--color-ink);
-  color: var(--color-cream);
+  background: var(--color-chip-bg);
+  color: var(--color-chip-text);
   border-radius: var(--radius-card);
   padding: 34px 40px;
   margin: 20px 0 0;
@@ -451,7 +500,8 @@ textarea:focus-visible {
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-style: normal;
-  color: var(--color-olive-light);
+  color: var(--color-chip-text);
+  opacity: 0.65;
 }
 
 .text-block {
@@ -498,8 +548,8 @@ textarea:focus-visible {
   cursor: pointer;
 }
 .mode-btn.is-active {
-  background: var(--color-ink);
-  color: var(--color-cream);
+  background: var(--color-chip-bg);
+  color: var(--color-chip-text);
 }
 
 .calculator-controls {
@@ -555,7 +605,7 @@ textarea:focus-visible {
   height: 100%;
   display: flex;
   align-items: flex-end;
-  background: rgba(42, 44, 34, 0.06);
+  background: var(--color-hover-tint);
   border-radius: 8px 8px 0 0;
   overflow: hidden;
 }
