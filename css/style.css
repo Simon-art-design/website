@@ -17,10 +17,11 @@
   /* Typografie */
   --font-heading: "Fraunces", "Iowan Old Style", Georgia, serif;
   --font-body: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Consolas, monospace;
 
   /* Radien / Abstände */
-  --radius-card: 16px;
-  --radius-small: 10px;
+  --radius-card: 12px;
+  --radius-small: 8px;
   --max-width: 1120px;
 }
 
@@ -82,12 +83,28 @@ textarea:focus-visible {
 }
 
 .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-olive-dark);
   margin: 0 0 0.75em;
+}
+
+.section-index {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-text);
+  opacity: 0.45;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 1px 6px;
 }
 
 .section-intro {
@@ -404,9 +421,11 @@ textarea:focus-visible {
   text-align: center;
 }
 .stat-number {
-  font-family: var(--font-heading);
-  font-size: 2.4rem;
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--color-ink);
   margin: 0 0 0.3em;
 }
@@ -505,7 +524,10 @@ textarea:focus-visible {
 .control output {
   display: inline-block;
   margin-top: 6px;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
   font-weight: 600;
+  font-size: 0.95rem;
   color: var(--color-olive-dark);
 }
 
@@ -579,13 +601,17 @@ textarea:focus-visible {
   border-bottom: 1px solid var(--color-border);
   font-size: 0.95rem;
 }
+.result-line strong {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
 .result-line-total {
   border-bottom: none;
   padding-top: 14px;
   font-size: 1.1rem;
 }
 .result-line-total strong {
-  font-family: var(--font-heading);
   font-size: 1.5rem;
   color: var(--color-ink);
 }
@@ -688,14 +714,66 @@ textarea:focus-visible {
    FOOTER
    ========================================================================== */
 .site-footer {
-  text-align: center;
-  padding: 32px 24px;
-  font-size: 0.85rem;
+  padding: 48px 24px 24px;
+  font-size: 0.88rem;
   color: var(--color-text);
-  opacity: 0.7;
   border-top: 1px solid var(--color-border);
 }
-.site-footer p { margin: 0; }
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 32px;
+}
+
+.footer-brand .brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-ink);
+  margin-bottom: 10px;
+}
+.footer-brand .brand-chevron { color: var(--color-olive-light); }
+.footer-brand p { margin: 0; opacity: 0.75; max-width: 320px; }
+
+.footer-col-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-olive-dark);
+  margin: 0 0 12px;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-col a, .footer-col span {
+  color: var(--color-text);
+  opacity: 0.85;
+}
+.footer-col a:hover { color: var(--color-olive-dark); opacity: 1; }
+
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.8rem;
+  opacity: 0.65;
+}
+.footer-bottom p { margin: 0; }
 
 /* ==========================================================================
    FADE-IN BEIM LADEN / SCROLLEN (einziger dezenter Effekt)
@@ -719,6 +797,8 @@ textarea:focus-visible {
    RESPONSIVE — Breakpoint 860px
    ========================================================================== */
 @media (max-width: 860px) {
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+
   .main-nav {
     position: absolute;
     top: 100%;
