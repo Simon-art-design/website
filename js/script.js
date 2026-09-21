@@ -252,7 +252,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var TOPIC_INFO = {
       kav: { label: 'Kinderaltersvorsorge', href: '#kinderaltersvorsorge', desc: 'Versicherungsbasierte Vorsorge für Ihr Kind.' },
-      verm: { label: 'Vermögensaufbau für Kinder', href: '#vermoegensaufbau', desc: 'Reiner Kapitalaufbau im Versicherungsmantel.' },
       altersvorsorge: { label: 'Altersvorsorge', href: '#altersvorsorge', desc: 'Gesetzliche Rente, Rürup-Rente und Altersvorsorgedepot.' },
       bu: { label: 'Berufsunfähigkeit', href: '#berufsunfaehigkeit', desc: 'Ihre Arbeitskraft zuverlässig absichern.' },
       kv: { label: 'Krankenversicherung', href: '#krankenversicherung', desc: 'Privat und gesetzlich im Vergleich.' },
